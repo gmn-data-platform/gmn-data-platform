@@ -1,0 +1,11 @@
+gmn-data-store/
+gmn-data-endpoints/
+gmn-data-platform-monitoring/
+gmn-python-api/
+
+logs/
+
+.env
+
+# Ignore IDE files
+.idea/*
