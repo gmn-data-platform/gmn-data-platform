@@ -12,7 +12,7 @@ TODO
 - [gmn-python-api](https://github.com/gmn-data-platform/gmn-python-api) - Python package for accessing Global Meteor Network data
 - [gmn-data-store](https://github.com/gmn-data-platform/gmn-data-store) - Database models, controllers and scripts
 - [gmn-data-store-ingestion](https://github.com/gmn-data-platform/gmn-data-store-ingestion) - Ingestion services for the GMN Data Store
-- [gmn-data-endpoints](https://github.com/gmn-data-platform/gmn-data-endpoints) - Data portal, REST API and live meteor map
+- [gmn-data-endpoints](https://github.com/gmn-data-platform/gmn-data-endpoints) - Data portal and REST API
 - [gmn-data-platform-monitoring](https://github.com/gmn-data-platform/gmn-data-platform-monitoring) - Monitoring services for the GMN Data Platform
 
 ## Technical Overview
