@@ -33,7 +33,7 @@ B -->|Consumes| D[Data warehouse]
 D -->|Queries| E[REST API/Atom feed]
 E -->|Gets| F[Data portal]
 E -->|Gets| G[Python library]
-G -->|Uses| H[Data analysis env]
+G -->|Uses| H[Data analysis environment]
 ```
  
 Full data flow diagram:
