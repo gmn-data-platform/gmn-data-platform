@@ -36,10 +36,9 @@ E -->|Gets| G[Python library]
 G -->|Uses| H[Data analysis environment]
 ```
  
-Full data flow diagram:
+Full data flow diagram (click to expand):
 
 ![GMN Data Platform Flow Diagram](GMN%20Data%20Platform%20Flow%20Diagram%20V3.drawio.png)
-
 
 
 - **Ingestion**: [Airflow](https://airflow.apache.org/) is a workflow management platform for data pipelines, it schedules and monitors daily data extraction tasks into [Kafka](https://kafka.apache.org/) of meteor trajectory summary files from the [GMN data directory](https://globalmeteornetwork.org/data/traj_summary_data/). This service uses the [gmn-python-api](https://github.com/gmn-data-platform/gmn-python-api) package to extract the last 10 days of produced trajectory summary daily CSV files at 1:00 every morning. Once extracted each row in each trajectory summary file is pushed to a Kafka broker in the topic `trajectory_summary_raw`. Another service consumes `trajectory_summary_raw` and updates a database.
