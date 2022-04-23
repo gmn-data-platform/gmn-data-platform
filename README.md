@@ -37,8 +37,11 @@ G -->|Uses| H[Data analysis env]
 ```
  
 Full data flow diagram:
- 
- 
+
+![GMN Data Platform Flow Diagram](GMN%20Data%20Platform%20Flow%20Diagram%20V3.drawio.png)
+
+
+
 - **Ingestion**: [Airflow](https://airflow.apache.org/) is a workflow management platform for data pipelines, it schedules and monitors daily data extraction tasks into [Kafka](https://kafka.apache.org/) of meteor trajectory summary files from the [GMN data directory](https://globalmeteornetwork.org/data/traj_summary_data/). This service uses the [gmn-python-api](https://github.com/gmn-data-platform/gmn-python-api) package to extract the last 10 days of produced trajectory summary daily CSV files at 1:00 every morning. Once extracted each row in each trajectory summary file is pushed to a Kafka broker in the topic `trajectory_summary_raw`. Another service consumes `trajectory_summary_raw` and updates a database.
 - **Data warehousing**: A relational SQL database stores meteor trajectory summary data using [SQLite](https://www.sqlite.org/index.html). It is populated from the Kafka `trajectory_summary_raw` topic. The `gmn-data-store` Python package handles setting up, querying and updating data in the database.
 - **Monitoring**: Logs, system metrics and Kafka messages are recorded by an [Elasticsearch](https://www.elastic.co/) cluster using [Metricbeat](https://www.elastic.co/beats/metricbeat). Data recorded can be visualised and monitored internally using [Kibana](https://www.elastic.co/kibana/). This is known as the [ELK stack](https://www.elastic.co/what-is/elk-stack).
