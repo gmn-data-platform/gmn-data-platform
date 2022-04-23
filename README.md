@@ -30,7 +30,7 @@ flowchart LR
  
 A[Batch extraction] -->|Trajectory summary| B(Messaging platform)
 B -->|Consumes| D[Data warehouse]
-D -->|Queries| E[REST API]
+D -->|Queries| E[REST API/Atom feed]
 E -->|Gets| F[Data portal]
 E -->|Gets| G[Python library]
 G -->|Uses| H[Data analysis env]
