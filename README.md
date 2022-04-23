@@ -26,7 +26,7 @@ Currently the GMN stores its meteor trajectory summary data in [CSV files](https
  
 Basic data flow diagram:
 ```mermaid
-flowchart LR 
+flowchart TD
  
 A[Batch extraction] -->|Trajectory summary| B(Messaging platform)
 B -->|Consumes| D[Data warehouse]
